@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="600.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FillApp.FillController">
+   <children>
+      <GridPane prefHeight="600.0" prefWidth="540.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="522.0" minHeight="10.0" prefHeight="400.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="336.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane fx:id="field" />
+            <Pane fx:id="controlls" prefHeight="197.0" prefWidth="492.0" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="downButton" layoutX="246.0" layoutY="87.0" mnemonicParsing="false" onAction="#downButton" text="Down" />
+                  <Button fx:id="upButton" layoutX="255.0" layoutY="47.0" mnemonicParsing="false" onAction="#upButton" text="Up" />
+                  <Button fx:id="leftButton" layoutX="198.0" layoutY="87.0" mnemonicParsing="false" onAction="#leftButton" text="Left" />
+                  <Button fx:id="rightButton" layoutX="309.0" layoutY="87.0" mnemonicParsing="false" onAction="#rightButton" text="Right" />
+                  <Button fx:id="undoButton" layoutX="441.0" layoutY="126.0" mnemonicParsing="false" onAction="#undoMovesButton" text="Undo moves" />
+                  <Button layoutX="439.0" layoutY="161.0" mnemonicParsing="false" onAction="#resetButton" text="Reset to start" />
+                  <Button layoutX="434.0" layoutY="14.0" mnemonicParsing="false" onAction="#getHighscore" text="Get High Scores" />
+                  <Button fx:id="saveButton" layoutX="426.0" layoutY="47.0" mnemonicParsing="false" onAction="#saveToHighscore" text="Save to High Score" />
+                  <TextField fx:id="nameBar" layoutX="279.0" layoutY="47.0" promptText="Name (max3 char)" />
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
